@@ -19,7 +19,7 @@ var usersRef = require('datamcfly').init(db, collection, api_key);
 var numbers = [];
 
 //	listen for new phone numbers being added to the system...
-usersRef.on('child_added', function(snapshot) {
+usersRef.on('added', function(snapshot) {
 	var snapshot = snapshot.value();
 	numbers.push( snapshot.phonenumber );
 	console.log( 'Added number ' + snapshot.phonenumber );
