@@ -18,6 +18,15 @@ var usersRef = require('datamcfly').init(db, collection, api_key);
 
 var numbers = [];
 
+//	When the app is first loaded, grab all current phone numbers...
+usersRef.on('value', function( response ) {
+	response.forEach( function( data ){
+		var snapshot = data.value();
+		numbers.push( snapshot.phonenumber );
+		console.log( 'Added number ' + snapshot.phonenumber );
+	});
+});
+
 //	listen for new phone numbers being added to the system...
 usersRef.on('added', function(snapshot) {
 	var snapshot = snapshot.value();
