@@ -1,7 +1,7 @@
 {
 	"name": "DailySMS",
 	"description": "Send daily SMS reminders using Data McFly and Twilio",
-	"author": "Roger Stringer <ricky@datamcfly.com>",
+	"author": "Roger Stringer <roger@datamcfly.com>",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/DataMcFly/dailysms"
